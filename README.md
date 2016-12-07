@@ -1,2 +1,5 @@
-# rust-by-example-end
-rust-by-example answer
+# rust-by-example
+
+https://rustwiki.org/rust-by-example/
+
+Answer.
