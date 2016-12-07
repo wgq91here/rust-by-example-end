@@ -15,7 +15,7 @@ struct Matrix(f32, f32, f32, f32);
 impl fmt::Display for Matrix {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         //let (a,b,c,d) = self;
-        write!(f, "(1.{} 1.{})\n(2.{} 2.{)}",self.0,self.1,self.2,self.3)
+        write!(f, "({} {})\n({} {})",self.0,self.1,self.2,self.3)
     }
 }
 
