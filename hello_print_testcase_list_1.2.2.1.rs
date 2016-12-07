@@ -17,7 +17,7 @@ impl fmt::Display for List {
             // 在调用 `write!` 前对每个元素（第一个元素除外）加上逗号。
             // 使用 `try!` ，在出错的情况返回。
             if count < vec_len - 1 {
-             try!(write!(f, "{}:{} ,",count,v)); 
+             try!(write!(f, "{}:{},",count,v)); 
             } else {
               try!(write!(f, "{}:{}", count, v));
             }
