@@ -8,9 +8,16 @@ fn reverse(pair: (i32, bool)) -> (bool, i32) {
     (boolean, integer)
 }
 
+
 // 在“动手试一试”的练习中要用到下面这个结构体。
 #[derive(Debug)]
 struct Matrix(f32, f32, f32, f32);
+
+fn transpose(m: Matrix) -> Matrix {
+    let m1 = Matrix(m.0, m.2, m.1, m.3);
+    m1
+}
+
 
 impl fmt::Display for Matrix {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
@@ -52,6 +59,8 @@ fn main() {
     println!("{:?}, {:?}, {:?}, {:?}", a, b, c, d);
 
     let matrix = Matrix(1.1, 1.2, 2.1, 2.2);
-    println!("{}", matrix)
-
+    println!("{}", matrix);
+        
+    println!("Matrix:\n{}", matrix);
+    println!("Transpose:\n{}", transpose(matrix));
 }
